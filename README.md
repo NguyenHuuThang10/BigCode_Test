@@ -2,7 +2,7 @@
 # Node.js REST API with TypeScript + Sequelize (No Framework)
 
 Dự án xây dựng REST API bằng **Node.js thuần**, sử dụng **TypeScript**, **Sequelize ORM** và **MySQL**.  
-Không dùng Express hay bất kỳ framework nào, phù hợp để học hoặc tùy biến theo nhu cầu riêng.
+Không dùng Express hay bất kỳ framework nào
 
 ---
 
