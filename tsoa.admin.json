@@ -1,0 +1,14 @@
+{
+  "entryFile": "src/start-up/main.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["src/controllers/**/*.ts"],
+  "spec": {
+    "outputDirectory": "src/routes/",
+    "specVersion": 3,
+    "basePath": "/api/admin",
+    "specFileBaseName": "swagger"
+  },
+  "routes": {
+    "routesDir": "src/routes"
+  }
+}
