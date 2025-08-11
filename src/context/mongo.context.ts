@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectMongo = async () => {
   try {
     await mongoose.connect(
-      "mongodb://localhost:27017/your_database_name", // Replace with your MongoDB connection string
+      "mongodb://localhost:27017/db-bigcode", // Replace with your MongoDB connection string
     );
     console.log("✅ MongoDB connected successfully");
   } catch (err) {

@@ -1,12 +1,12 @@
 {
   "entryFile": "src/start-up/main.ts",
   "noImplicitAdditionalProperties": "throw-on-extras",
-  "controllerPathGlobs": ["src/controllers/admin/**/*.ts", "src/controllers/*.ts"],
+  "controllerPathGlobs": ["src/controllers-user/**/*.ts"],
   "spec": {
-    "outputDirectory": "src/routes/",
+    "outputDirectory": "src/routes/user/",
     "specVersion": 3,
-    "basePath": "/api/admin",
-    "specFileBaseName": "swagger",
+    "basePath": "/api/user",
+    "specFileBaseName": "swagger-user",
     "securityDefinitions": {
       "jwt": {
         "type": "http",
@@ -16,7 +16,7 @@
     }
   },
   "routes": {
-    "routesDir": "src/routes",
+    "routesDir": "src/routes/user",
     "authenticationModule": "src/middlewares/auth.middlewares.ts"
   }
 }

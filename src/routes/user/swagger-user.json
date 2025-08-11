@@ -45,28 +45,6 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"Role": {
-				"enum": [
-					"USER",
-					"ADMIN"
-				],
-				"type": "string"
-			},
-			"UpdateRolesRequest": {
-				"properties": {
-					"roles": {
-						"items": {
-							"$ref": "#/components/schemas/Role"
-						},
-						"type": "array"
-					}
-				},
-				"required": [
-					"roles"
-				],
-				"type": "object",
-				"additionalProperties": false
-			},
 			"RegisterRequest": {
 				"properties": {
 					"email": {
@@ -121,53 +99,6 @@
 		"contact": {}
 	},
 	"paths": {
-		"/users/{id}/roles": {
-			"put": {
-				"operationId": "UpdateUserRoles",
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/ApiResponse"
-								}
-							}
-						}
-					}
-				},
-				"tags": [
-					"User"
-				],
-				"security": [
-					{
-						"jwt": [
-							"ADMIN"
-						]
-					}
-				],
-				"parameters": [
-					{
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"$ref": "#/components/schemas/UpdateRolesRequest"
-							}
-						}
-					}
-				}
-			}
-		},
 		"/auth/register": {
 			"post": {
 				"operationId": "Register",
@@ -235,7 +166,7 @@
 	},
 	"servers": [
 		{
-			"url": "/api/admin"
+			"url": "/api/user"
 		}
 	]
 }
